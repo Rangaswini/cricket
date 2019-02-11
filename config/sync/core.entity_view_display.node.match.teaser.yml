@@ -1,0 +1,29 @@
+uuid: 7a20ce4a-009a-466f-8293-4066d1661793
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.match.field_teams
+    - node.type.match
+  module:
+    - user
+id: node.match.teaser
+targetEntityType: node
+bundle: match
+mode: teaser
+content:
+  field_teams:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

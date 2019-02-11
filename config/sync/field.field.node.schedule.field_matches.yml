@@ -1,0 +1,28 @@
+uuid: 3278f662-7c31-4269-8e29-53901cf02ca8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_matches
+    - node.type.match
+    - node.type.schedule
+id: node.schedule.field_matches
+field_name: field_matches
+entity_type: node
+bundle: schedule
+label: matches
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      match: match
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

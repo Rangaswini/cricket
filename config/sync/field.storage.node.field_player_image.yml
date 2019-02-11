@@ -1,0 +1,30 @@
+uuid: c1124338-b21e-4b93-b78a-9d36b360552f
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_player_image
+field_name: field_player_image
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ab7532e7-0ce4-4ac0-ba9d-1d85e8fa8d57
+    alt: 'image not available'
+    title: ''
+    width: 231
+    height: 218
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

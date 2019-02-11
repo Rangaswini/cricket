@@ -1,0 +1,21 @@
+uuid: a33beded-9833-4f05-9605-6a3d1dd06a89
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.team_names
+  module:
+    - text
+id: taxonomy_term.team_names.default
+targetEntityType: taxonomy_term
+bundle: team_names
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

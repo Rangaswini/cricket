@@ -1,0 +1,19 @@
+uuid: ef2a37c6-48e8-4241-8026-460601a69866
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_match_place
+    - node.type.schedule
+id: node.schedule.field_match_place
+field_name: field_match_place
+entity_type: node
+bundle: schedule
+label: 'match place'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

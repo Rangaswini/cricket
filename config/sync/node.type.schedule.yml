@@ -1,0 +1,18 @@
+uuid: addc0f84-8d70-4464-b331-416da83b4d6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Schedule
+type: schedule
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
