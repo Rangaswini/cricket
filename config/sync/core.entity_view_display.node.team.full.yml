@@ -1,8 +1,9 @@
-uuid: dc3a8bb1-dd1b-43d3-84b0-4a9bd08080bb
+uuid: 0940ab58-350e-4f8e-98cd-4b4251954498
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.team.field_player_image
     - field.field.node.team.field_player_name
     - field.field.node.team.field_team_name
@@ -10,10 +11,10 @@ dependencies:
   module:
     - image
     - user
-id: node.team.default
+id: node.team.full
 targetEntityType: node
 bundle: team
-mode: default
+mode: full
 content:
   field_player_image:
     weight: 102
@@ -42,7 +43,7 @@ content:
     region: content
   links:
     weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

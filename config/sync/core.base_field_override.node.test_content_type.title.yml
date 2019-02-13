@@ -1,0 +1,18 @@
+uuid: bc116667-a7e6-4a3f-b76c-7fe3658c5ede
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.test_content_type
+id: node.test_content_type.title
+field_name: title
+entity_type: node
+bundle: test_content_type
+label: test
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
