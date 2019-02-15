@@ -1,0 +1,25 @@
+uuid: e5b5775a-bf73-4c64-8cfd-8a0cd7da7eed
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recipe_view
+  module:
+    - views
+  theme:
+    - bootstrap
+id: views_block__recipe_view_block_1
+theme: bootstrap
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'views_block:recipe_view-block_1'
+settings:
+  id: 'views_block:recipe_view-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

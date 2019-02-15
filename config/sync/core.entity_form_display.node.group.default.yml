@@ -1,44 +1,50 @@
-uuid: 0e9f80dd-584e-403e-9f37-c7d0fb8d9662
+uuid: 07bb81d7-e2e7-404a-ba9d-d99b4097ca9f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_author
-    - node.type.page
+    - field.field.node.group.body
+    - field.field.node.group.field_group_description
+    - field.field.node.group.field_group_name
+    - node.type.group
   module:
     - path
     - text
-_core:
-  default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
-id: node.page.default
+id: node.group.default
 targetEntityType: node
-bundle: page
+bundle: group
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
-    region: content
+    weight: 121
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_author:
-    weight: 121
+  field_group_description:
+    weight: 123
     settings:
-      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: text_textfield
+    region: content
+  field_group_name:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   path:
     type: path
@@ -78,10 +84,10 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    region: content
     third_party_settings: {  }
 hidden: {  }

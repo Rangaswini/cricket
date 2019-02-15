@@ -1,0 +1,22 @@
+uuid: 3b8a9d7a-851c-42c7-9da9-277174490c44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_group_ref
+  module:
+    - user
+id: user.user.field_group_ref
+field_name: field_group_ref
+entity_type: user
+bundle: user
+label: 'Group ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: a89ea818-3a56-49b0-87b2-847bd72bd08d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.page
+id: node.page.field_author
+field_name: field_author
+entity_type: node
+bundle: page
+label: author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

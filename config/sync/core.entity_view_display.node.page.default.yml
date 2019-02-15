@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_author
     - node.type.page
   module:
     - text
@@ -22,7 +23,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_author:
+    weight: 102
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
