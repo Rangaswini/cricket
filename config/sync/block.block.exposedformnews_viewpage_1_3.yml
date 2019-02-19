@@ -1,0 +1,37 @@
+uuid: 6f035157-9681-4cbf-871c-1f4c2e10489f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_view
+  module:
+    - ctools
+    - system
+    - views
+  theme:
+    - bootstrap
+id: exposedformnews_viewpage_1_3
+theme: bootstrap
+region: navigation
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:news_view-page_1'
+settings:
+  id: 'views_exposed_filter_block:news_view-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      test_content_type: test_content_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
