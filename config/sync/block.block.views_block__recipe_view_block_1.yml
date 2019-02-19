@@ -5,13 +5,16 @@ dependencies:
   config:
     - views.view.recipe_view
   module:
+    - ctools
+    - system
+    - user
     - views
   theme:
     - bootstrap
 id: views_block__recipe_view_block_1
 theme: bootstrap
 region: sidebar_second
-weight: -7
+weight: -6
 provider: null
 plugin: 'views_block:recipe_view-block_1'
 settings:
@@ -22,4 +25,28 @@ settings:
   views_label: ''
   items_per_page: none
   context_mapping: {  }
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      group: group
+      match: match
+      news: news
+      recipe: recipe
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

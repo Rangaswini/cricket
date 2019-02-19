@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.group.body
     - field.field.node.group.field_group_description
     - field.field.node.group.field_group_name
+    - field.field.node.group.field_video_media
     - node.type.group
   module:
     - text
@@ -19,6 +20,11 @@ content:
     label: hidden
     type: text_default
     weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -36,6 +42,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_video_media:
+    type: entity_reference_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   links:
     weight: 100

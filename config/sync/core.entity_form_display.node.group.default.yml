@@ -6,8 +6,11 @@ dependencies:
     - field.field.node.group.body
     - field.field.node.group.field_group_description
     - field.field.node.group.field_group_name
+    - field.field.node.group.field_video_media
     - node.type.group
   module:
+    - content_moderation
+    - media_library
     - path
     - text
 id: node.group.default
@@ -46,6 +49,18 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_video_media:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
