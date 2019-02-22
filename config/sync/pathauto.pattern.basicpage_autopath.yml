@@ -1,0 +1,22 @@
+uuid: 172ae096-cbf4-468a-8d0f-245c943377fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: basicpage_autopath
+label: Basicpage_autopath
+type: 'canonical_entities:node'
+pattern: 'current-page/[node:title]/[node:author]'
+selection_criteria:
+  5313f28f-ad36-4c74-8f1b-537407627b54:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 5313f28f-ad36-4c74-8f1b-537407627b54
+selection_logic: and
+weight: -5
+relationships: {  }
