@@ -6,9 +6,11 @@ dependencies:
     - field.field.node.group.body
     - field.field.node.group.field_group_description
     - field.field.node.group.field_group_name
+    - field.field.node.group.field_para_ref
     - field.field.node.group.field_video_media
     - node.type.group
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.group.default
@@ -42,6 +44,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_para_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_video_media:
     type: entity_reference_entity_view

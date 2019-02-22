@@ -1,0 +1,29 @@
+uuid: a7ebe855-b662-423b-8a03-177b73b6f040
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_para_ref
+    - node.type.group
+  module:
+    - entity_reference_revisions
+id: node.group.field_para_ref
+field_name: field_para_ref
+entity_type: node
+bundle: group
+label: para_ref
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      para_test:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

@@ -10,8 +10,15 @@ dependencies:
     - image.style.thumbnail
     - node.type.recipe
   module:
+    - content_moderation
+    - field_layout
     - image
+    - layout_discovery
     - path
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -56,6 +63,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

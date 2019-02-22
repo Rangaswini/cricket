@@ -10,10 +10,16 @@ dependencies:
     - node.type.blog
   module:
     - content_moderation
+    - field_layout
     - image
+    - layout_discovery
     - media_library
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.blog.default
 targetEntityType: node
 bundle: blog

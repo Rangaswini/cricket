@@ -1,0 +1,31 @@
+uuid: 7ed9f7a4-a3b8-417c-bb47-889d5ddc9a11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.para_test.field_about_para
+    - paragraphs.paragraphs_type.para_test
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.para_test.default
+targetEntityType: paragraph
+bundle: para_test
+mode: default
+content:
+  field_about_para:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

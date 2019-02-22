@@ -8,8 +8,15 @@ dependencies:
     - field.field.node.schedule.field_schedule_time
     - node.type.schedule
   module:
+    - content_moderation
     - datetime
+    - field_layout
+    - layout_discovery
     - path
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.schedule.default
 targetEntityType: node
 bundle: schedule
@@ -44,6 +51,12 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

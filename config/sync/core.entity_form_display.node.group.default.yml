@@ -6,13 +6,21 @@ dependencies:
     - field.field.node.group.body
     - field.field.node.group.field_group_description
     - field.field.node.group.field_group_name
+    - field.field.node.group.field_para_ref
     - field.field.node.group.field_video_media
     - node.type.group
   module:
     - content_moderation
+    - field_layout
+    - layout_discovery
     - media_library
+    - paragraphs
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.group.default
 targetEntityType: node
 bundle: group
@@ -48,6 +56,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_para_ref:
+    type: entity_reference_paragraphs
+    weight: 125
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_video_media:
     weight: 124

@@ -9,14 +9,61 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_metatag
     - field.field.node.article.field_tags
-    - image.style.large
     - node.type.article
   module:
     - comment
+    - field_group
     - image
+    - layout_builder
     - metatag
     - text
     - user
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_tab1
+        - group_tab2
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: tabs
+      region: content
+    group_tab1:
+      children:
+        - field_image
+        - body
+        - field_tags
+      parent_name: group_tabs
+      weight: 20
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: tab1
+      region: content
+    group_tab2:
+      children:
+        - links
+        - flag_bookmark
+        - comment
+        - field_metatag
+      parent_name: group_tabs
+      weight: 21
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: tab2
+      region: content
+  layout_builder:
+    sections: {  }
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default
@@ -28,12 +75,12 @@ content:
     type: text_default
     weight: 0
     region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    label: hidden
   comment:
     type: comment_default
-    weight: 110
+    weight: 102
     region: content
     label: above
     settings:
@@ -44,31 +91,31 @@ content:
     type: image
     weight: -1
     region: content
+    label: hidden
     settings:
-      image_style: large
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
-    label: hidden
   field_metatag:
-    weight: 111
+    type: metatag_empty_formatter
+    weight: 103
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
   field_tags:
     type: entity_reference_label
-    weight: 10
+    weight: 1
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   flag_bookmark:
-    weight: 10
+    weight: 101
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   links:
     weight: 100
     region: content
