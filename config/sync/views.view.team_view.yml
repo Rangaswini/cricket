@@ -13,7 +13,7 @@ module: views
 description: ''
 tag: ''
 base_table: taxonomy_term_field_data
-base_field: nid
+base_field: tid
 core: 8.x
 display:
   default:
@@ -146,6 +146,7 @@ display:
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
