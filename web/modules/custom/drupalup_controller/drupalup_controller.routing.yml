@@ -1,0 +1,7 @@
+drupalup_controller.my_controller:
+  path: /hello
+  defaults:
+    _title: 'Simple Configuration'
+    _form: '\Drupal\drupalup_controller\Controller\HelloController::content'
+  requirements:
+    _permission: 'access content'
