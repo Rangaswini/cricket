@@ -22,7 +22,7 @@ class SimpleSettingForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'rangoform.settings',
+      'simple.settings',
     ];
   }
 
@@ -30,7 +30,7 @@ class SimpleSettingForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('rangoform.settings');
+    $config = $this->config('simple.settings');
     $form['first_name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('First name'),
@@ -64,13 +64,20 @@ class SimpleSettingForm extends ConfigFormBase {
           );  
     return parent::buildForm($form, $form_state);
   }
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+      $name=$form_state->getValues();
+   // $name = $form_state['values']['first_;
+    if (strlen(trim($form_state->getValues('first_name'))) > 0 && !ereg('^[a-z A-Z\'\-]+$', $form_state->getValues('first_name'))) {
+        form_set_error('submitted][name', t('Your name contains invalid characters. Only letters are allowed!'));
+    }
+  }
 
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
-    $this->config('rangoform.settings')
+    $this->config('simple.settings')
       ->set('variable_name', $values)
       ->save();
     parent::submitForm($form, $form_state);

@@ -1,0 +1,14 @@
+variable_name:
+  first_name: '364'
+  last_name: ''
+  choice: null
+  type_options:
+    bcs: BCS
+    mcs: MCS
+    mca: MCA
+  type: bcs
+  submit: 'Save configuration'
+  form_build_id: form-soQTbrIQPIF1gG-UrlKXbyp1Bo-aw3iZkS3gXG5PvPY
+  form_token: AsRXuMoCXMjB79o7gXTK2RJGOGFOc5KNR7MKqiKOrWk
+  form_id: rangoform_admin_settings
+  op: 'Save configuration'

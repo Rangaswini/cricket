@@ -2,6 +2,6 @@ rangoform.simple_form:
   path: /my-form
   defaults:
     _title: 'Simple Configuration'
-    _form: '\Drupal\rangoform\Form\SimpleSettingForm'
+    _form: '\Drupal\rangoform\Form\BasicFormExample'
   requirements:
     _permission: 'access content'
