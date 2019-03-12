@@ -1,0 +1,24 @@
+routedemo.hello:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\routedemo\Controller\DynamicRoute::hello'
+    _title: 'Hello'
+  requirements:
+    _permission: 'access content'
+
+
+routedemo.hello_with_name:
+  path: '/hello/{arg}'
+  defaults:
+    _controller: '\Drupal\routedemo\Controller\DynamicRoute::helloName'
+    _title: 'Hello Name'
+  requirements:
+    _permission: 'access hello route'
+  
+routedemo.author_name:
+  path: '/mynode/{node}'
+  defaults:
+    _controller: '\Drupal\routedemo\Controller\DynamicRoute::authorname'
+    _title: 'author'
+  requirements:
+    _permission: 'access hello route'

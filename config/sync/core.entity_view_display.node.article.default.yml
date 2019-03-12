@@ -8,7 +8,9 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_metatag
+    - field.field.node.article.field_mysites
     - field.field.node.article.field_tags
+    - field.field.node.article.field_title
     - node.type.article
   module:
     - comment
@@ -103,6 +105,13 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_mysites:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_tags:
     type: entity_reference_label
     weight: 1
@@ -111,6 +120,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  field_title:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   flag_bookmark:
     weight: 101
     region: content

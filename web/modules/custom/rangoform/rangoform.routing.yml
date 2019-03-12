@@ -1,7 +1,7 @@
 rangoform.simple_form:
-  path: '/hello'
+  path: '/hellohi'
   defaults:
-    _controller: '\Drupal\rangoform\Controller\HelloController::content'
+    _form: '\Drupal\rangoform\Form\BasicFormExample'
     _title: 'Hello World'
   requirements:
     _permission: 'access content'

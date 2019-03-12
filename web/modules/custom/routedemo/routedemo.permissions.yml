@@ -1,0 +1,3 @@
+access hello route:
+  description: 'Custom permission Access hello route'
+  title: 'Access Hello Route'

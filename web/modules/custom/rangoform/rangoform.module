@@ -1,0 +1,51 @@
+<?php
+use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ *
+ * This tests saving a node on node insert.
+ *
+ * @see \Drupal\node\Tests\NodeSaveTest::testNodeSaveOnInsert()
+ */
+function rangoform_entity_presave(EntityInterface $entity) {
+    //$type=$entity->bundle();
+    $uid=$entity->id();
+    $nids = \Drupal::entityQuery('node')->condition('uid',$uid)->execute();
+    $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+    foreach($nodes as $n)
+    {
+        \Drupal::logger('rangoform')->notice('Node Title '. $n->title->value);
+
+    }
+   
+}
+
+
+function rangoform_node_insert(NodeInterface $node) {
+  // Set the node title to the node ID and save.
+//   if (!$node->getType() == 'page') {
+//     $n=$node->getTitle();
+//     $nn=str_replace(' ', '_', $n);
+//     $node->set('field_site',$nn);	
+
+//     //$newString = $n.replace(/[^A-Z0-9]+/ig, "_");
+//     //$node->field_site->value=$newString;
+//     //$node->setNewRevision(FALSE);
+//     $node->save();
+if ($node->getType() == 'page') {
+    $title=$node->getTitle();
+    // $t = str_replace(' ', '_', $t);
+    // $t = preg_replace('/[^A-Za-z0-9\_]/', '', $t);
+    $title = preg_replace('/[^A-Za-z0-9\- ]/', '', $title);
+   $title=preg_replace('/^\s+|\s+$|\s+(?=\s)/', '', $title);
+   $title = str_replace(' ', '_', $title);
+    $title = strtolower($title);
+    $node->set('field_site', $title)->save();
+ 
+ 
+    //\Drupal::logger('my_module')->notice($t);
+  //}
+  }
+}

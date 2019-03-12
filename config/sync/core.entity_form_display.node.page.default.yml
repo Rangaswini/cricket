@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_author
+    - field.field.node.page.field_site
     - node.type.page
   module:
     - content_moderation
@@ -46,6 +47,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_site:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
     region: content
   moderation_state:
     type: moderation_state_default
