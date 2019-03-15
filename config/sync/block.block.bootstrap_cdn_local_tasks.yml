@@ -1,13 +1,13 @@
-uuid: e7b7667d-3c3b-434a-9286-7012786c354c
+uuid: 15265750-46b9-48d7-8ddb-7a2f952c8639
 langcode: en
 status: true
 dependencies:
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
-id: bootstrap_local_tasks
-theme: bootstrap
+id: bootstrap_cdn_local_tasks
+theme: bootstrap_cdn
 region: header
 weight: 10
 provider: null

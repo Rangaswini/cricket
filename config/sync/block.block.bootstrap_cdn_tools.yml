@@ -1,4 +1,4 @@
-uuid: 07dd6ee9-f2f1-4958-839c-92873b39a671
+uuid: 77e73bbe-f393-454f-a835-844dd65cb0d2
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: f3Dd5TnUiFDjFZp9yEGJInwt6cUzs7O6SvLTFTATSlU
-id: bootstrap_tools
-theme: bootstrap
+id: bootstrap_cdn_tools
+theme: bootstrap_cdn
 region: sidebar_second
 weight: 0
 provider: null

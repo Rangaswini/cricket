@@ -1,4 +1,4 @@
-uuid: 13bee23c-0a0a-4431-9767-705e635710c3
+uuid: 99a1eb2a-20f6-43d8-ae47-014491f8b843
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: GT_zYl7I9VAILH8OxMRe-VDvFadCDHxRcnmBc5xEmf0
-id: bootstrap_main_menu
-theme: bootstrap
+id: bootstrap_cdn_main_menu
+theme: bootstrap_cdn
 region: navigation_collapsible
 weight: 10
 provider: null

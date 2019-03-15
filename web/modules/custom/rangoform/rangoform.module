@@ -17,7 +17,6 @@ function rangoform_entity_presave(EntityInterface $entity) {
     foreach($nodes as $n)
     {
         \Drupal::logger('rangoform')->notice('Node Title '. $n->title->value);
-
     }
    
 }
@@ -35,17 +34,15 @@ function rangoform_node_insert(NodeInterface $node) {
 //     //$node->setNewRevision(FALSE);
 //     $node->save();
 if ($node->getType() == 'page') {
+    kint($node);
+    exit();
     $title=$node->getTitle();
-    // $t = str_replace(' ', '_', $t);
-    // $t = preg_replace('/[^A-Za-z0-9\_]/', '', $t);
+    
     $title = preg_replace('/[^A-Za-z0-9\- ]/', '', $title);
    $title=preg_replace('/^\s+|\s+$|\s+(?=\s)/', '', $title);
    $title = str_replace(' ', '_', $title);
     $title = strtolower($title);
     $node->set('field_site', $title)->save();
  
- 
-    //\Drupal::logger('my_module')->notice($t);
-  //}
   }
 }

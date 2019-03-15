@@ -1,15 +1,15 @@
-uuid: d37a6af0-fb21-47aa-9184-ae94f09807fc
+uuid: 8edecdc5-4a5c-46ab-bdda-eaf8e9cef174
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
-id: bootstrap_help
-theme: bootstrap
+id: bootstrap_cdn_help
+theme: bootstrap_cdn
 region: help
 weight: -30
 provider: null

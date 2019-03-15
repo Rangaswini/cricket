@@ -1,13 +1,13 @@
-uuid: fb60838e-4002-4243-ad37-95a2df906aef
+uuid: eb1d0b5d-169a-4cc0-862b-5a343e3e65f1
 langcode: en
 status: true
 dependencies:
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
-id: bootstrap_page_title
-theme: bootstrap
+id: bootstrap_cdn_page_title
+theme: bootstrap_cdn
 region: header
 weight: 0
 provider: null

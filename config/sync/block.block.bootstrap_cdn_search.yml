@@ -1,15 +1,15 @@
-uuid: 14ea9fa5-2f84-4f43-8f50-fe1fadd7f07d
+uuid: d4b3585b-237d-4e68-8289-bfc8d4832ae1
 langcode: en
 status: true
 dependencies:
   module:
     - search
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
-id: bootstrap_search
-theme: bootstrap
+id: bootstrap_cdn_search
+theme: bootstrap_cdn
 region: sidebar_second
 weight: -1
 provider: null

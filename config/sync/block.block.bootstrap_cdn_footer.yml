@@ -1,4 +1,4 @@
-uuid: d6448b2f-4556-47b3-a11d-fe184c67775f
+uuid: e20bd043-9b6c-43d7-8291-b8fd7069a5be
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: h06zhb3xV9_2_3Zy9NsyylL7YBaEDlMwMEqNwAn8kMo
-id: bootstrap_footer
-theme: bootstrap
+id: bootstrap_cdn_footer
+theme: bootstrap_cdn
 region: footer
 weight: 0
 provider: null

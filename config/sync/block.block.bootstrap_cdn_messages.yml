@@ -1,15 +1,15 @@
-uuid: 9d7abb9b-6b26-4b25-9358-9d2e9d69ca76
+uuid: 6bd4de77-940b-4e02-9d0b-7fb4d39b8786
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bootstrap
+    - bootstrap_cdn
 _core:
   default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
-id: bootstrap_messages
-theme: bootstrap
+id: bootstrap_cdn_messages
+theme: bootstrap_cdn
 region: header
 weight: -50
 provider: null

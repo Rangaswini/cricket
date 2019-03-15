@@ -17,9 +17,9 @@ class BasicFormExample extends FormBase {
       public function __construct(LoggerChannelFactory $loggerFactory) {
         $this->loggerFactory = $loggerFactory->get('myform_data');
       }
-      public static function create(ContainerInterface $container){
-        return new static ($container->get('logger.factory'));
-      }
+        public static function create(ContainerInterface $container){
+          return new static ($container->get('logger.factory'));
+        }
 
   /**
    * {@inheritdoc}
