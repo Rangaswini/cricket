@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex; }
+
+.wrapper.seventy {
+  flex-grow: 70%; }
+
+.wrapper.thirty {
+  flex-shrink: 30%; }
+
+.wrapper.fullwidth {
+  width: 100%; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }

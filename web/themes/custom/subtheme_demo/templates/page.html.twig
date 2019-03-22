@@ -1,0 +1,13 @@
+
+{% set classname = page.sidebar_second ? 'seventy' : 'fullwidth' %}
+<div class="wrapper">
+<div {{ attributes.addClass(classname) }}>
+        {{ page.content }}
+</div>
+{% if classname =='seventy' %}
+
+<div class="thirty">
+        {{ page.sidebar_second }}
+</div>
+</div>
+{% endif %}
