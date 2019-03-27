@@ -1,0 +1,17 @@
+<?php
+function weather_theme($existing, $type, $theme, $path) {
+  return array('weather' =>                  // this is the name of the template
+           array(
+            'variables' => array(
+                'city' => null,
+                'image' => null,
+                'description' => null,
+                'temp_min' => null, 
+                'temp_max' => null,
+                'pressure' => null,
+                'humidity' => null,
+            ),
+            'template' => 'customTwig',
+        )
+    );
+}

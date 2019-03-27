@@ -1,0 +1,24 @@
+uuid: a2f7cb97-eff8-41c1-ad5a-2be9ca5c91c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - weather
+  theme:
+    - bootstrap
+id: theweatherblock_3
+theme: bootstrap
+region: highlighted
+weight: 0
+provider: null
+plugin: weather_custom_block
+settings:
+  id: weather_custom_block
+  label: 'The weather block'
+  provider: weather
+  label_display: visible
+  city: Sangamner
+  desc: 'My home town'
+  image:
+    - '75'
+visibility: {  }

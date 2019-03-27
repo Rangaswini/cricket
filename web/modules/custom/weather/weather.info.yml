@@ -1,0 +1,5 @@
+name: weather_form
+description: 'city wise weather form'
+type: module
+package: Custom
+core: 8.x

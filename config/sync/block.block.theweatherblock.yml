@@ -1,0 +1,24 @@
+uuid: acff8afa-09a4-4f65-952f-5b5b38503aac
+langcode: en
+status: true
+dependencies:
+  module:
+    - weather
+  theme:
+    - subtheme_demo
+id: theweatherblock
+theme: subtheme_demo
+region: content
+weight: -6
+provider: null
+plugin: weather_custom_block
+settings:
+  id: weather_custom_block
+  label: 'The weather block'
+  provider: weather
+  label_display: visible
+  city: Mumbai
+  desc: 'this is mumbai'
+  image:
+    - '72'
+visibility: {  }

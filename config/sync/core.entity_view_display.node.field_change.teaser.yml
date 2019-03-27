@@ -1,0 +1,30 @@
+uuid: 9d1feca0-30c6-4219-9e0c-31f6e24793b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.field_change.body
+    - node.type.field_change
+  module:
+    - text
+    - user
+id: node.field_change.teaser
+targetEntityType: node
+bundle: field_change
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

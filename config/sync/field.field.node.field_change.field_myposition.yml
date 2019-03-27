@@ -1,0 +1,21 @@
+uuid: 2d08ca0a-5a2c-4b54-9e88-5f985b7bcea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_myposition
+    - node.type.field_change
+  module:
+    - options
+id: node.field_change.field_myposition
+field_name: field_myposition
+entity_type: node
+bundle: field_change
+label: myposition
+description: "left\r\ncenter\r\nright"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

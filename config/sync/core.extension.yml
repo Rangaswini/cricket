@@ -55,7 +55,6 @@ module:
   page_cache: 0
   path: 0
   quickedit: 0
-  rangoform: 0
   rdf: 0
   routedemo: 0
   search: 0
@@ -71,6 +70,7 @@ module:
   views_slideshow: 0
   views_slideshow_cycle: 0
   views_ui: 0
+  weather: 0
   workflows: 0
   menu_link_content: 1
   pathauto: 1
@@ -85,6 +85,7 @@ theme:
   business_responsive_theme: 0
   bootstrap: 0
   bootstrap_cdn: 0
+  subtheme_demo: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

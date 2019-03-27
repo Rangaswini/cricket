@@ -95,13 +95,16 @@
     </footer>
   {% endif %}
 
-  {# <div{{ content_attributes.addClass('content') }}>
-    {{ kint(content) }}
-  </div> #}
-  {% set classname = content.field_myposition[0]['#markup'] %}
+  <div class='content'>
+    <div  class="myclass" style="background-image: url('{{ file_url(content.field_background_image['#items'].entity.uri.value) }}')">
+  {{ content.field_heading_text }}
+ </div>
+ </div>
+  
+  {# {% set classname = content.field_myposition[0]['#markup'] %}
   <div {{content_attributes.addClass(classname)}}>
   {{ content.field_test_text }}
-  </div> 
+  </div>  #}
 
 
 </article>

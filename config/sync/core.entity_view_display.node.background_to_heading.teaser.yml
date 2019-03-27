@@ -1,0 +1,30 @@
+uuid: d3363a78-188a-434a-984d-4d35015c780e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.background_to_heading.body
+    - node.type.background_to_heading
+  module:
+    - text
+    - user
+id: node.background_to_heading.teaser
+targetEntityType: node
+bundle: background_to_heading
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

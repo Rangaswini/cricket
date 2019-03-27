@@ -1,0 +1,24 @@
+uuid: a2d5ad75-0268-4792-ba4d-888daef43b87
+langcode: en
+status: true
+dependencies:
+  module:
+    - weather
+  theme:
+    - bootstrap
+id: theweatherblock_4
+theme: bootstrap
+region: sidebar_second
+weight: 0
+provider: null
+plugin: weather_custom_block
+settings:
+  id: weather_custom_block
+  label: 'The weather block'
+  provider: weather
+  label_display: visible
+  city: Japan
+  desc: 'this is japan'
+  image:
+    - '76'
+visibility: {  }

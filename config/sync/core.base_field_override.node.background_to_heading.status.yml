@@ -1,0 +1,22 @@
+uuid: 4d1d0297-6add-47ab-a1f8-5a3e658ff944
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.background_to_heading
+id: node.background_to_heading.status
+field_name: status
+entity_type: node
+bundle: background_to_heading
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

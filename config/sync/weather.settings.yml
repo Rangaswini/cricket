@@ -1,0 +1,14 @@
+variable_name:
+  your_message: b6907d289e10d714a6e88b30761fae22
+  submit: 'Save configuration'
+  form_build_id: form-LO4cGVnYUAVsUXGJegiJ0C_fCqcxqOS-AYz98Fq-DXk
+  form_token: 3bAtQwOn6E1Vr8GTkrm2Stt6bUhB-xtO5Vrok6zCF78
+  form_id: weather_admin_settings
+  op: 'Save configuration'
+app:
+  your_message: b6907d289e10d714a6e88b30761fae22
+  submit: 'Save configuration'
+  form_build_id: form-lr3K7klww2C4BAwjcz6QKd5trHgxWvDfw7VIfjJ_MoQ
+  form_token: 3bAtQwOn6E1Vr8GTkrm2Stt6bUhB-xtO5Vrok6zCF78
+  form_id: weather_admin_settings
+  op: 'Save configuration'

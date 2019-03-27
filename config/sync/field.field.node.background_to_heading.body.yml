@@ -1,0 +1,22 @@
+uuid: a9c1b28c-8360-42d6-9a89-c3a8aec9103f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.background_to_heading
+  module:
+    - text
+id: node.background_to_heading.body
+field_name: body
+entity_type: node
+bundle: background_to_heading
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

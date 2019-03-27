@@ -1,0 +1,30 @@
+uuid: 9d946bfe-7c32-4076-bb39-22a4294ba539
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_myposition
+field_name: field_myposition
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: left
+    -
+      value: center
+      label: center
+    -
+      value: right
+      label: right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

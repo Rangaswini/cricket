@@ -1,0 +1,24 @@
+uuid: 9de26a00-d581-4558-a319-59eeb5a95b93
+langcode: en
+status: true
+dependencies:
+  module:
+    - weather
+  theme:
+    - subtheme_demo
+id: theweatherblock_2
+theme: subtheme_demo
+region: sidebar_second
+weight: 0
+provider: null
+plugin: weather_custom_block
+settings:
+  id: weather_custom_block
+  label: 'The weather block'
+  provider: weather
+  label_display: visible
+  city: Delhi
+  desc: 'this is delhi'
+  image:
+    - '73'
+visibility: {  }

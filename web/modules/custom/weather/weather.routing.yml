@@ -1,0 +1,7 @@
+rangoform.simple_form:
+  path: '/weatherdata'
+  defaults:
+    _form: '\Drupal\weather\Form\WeatherForm'
+    _title: 'Weather data'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,22 @@
+uuid: a42b13eb-feea-43cc-873f-ec1f1013aa22
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.field_change
+id: node.field_change.status
+field_name: status
+entity_type: node
+bundle: field_change
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
