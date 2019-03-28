@@ -33,6 +33,8 @@ class WeatherForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Application Id'),
       '#default_value' => $config->get('app'),
+      '#required' => TRUE,
+
     ];
     return parent::buildForm($form, $form_state);
   }
