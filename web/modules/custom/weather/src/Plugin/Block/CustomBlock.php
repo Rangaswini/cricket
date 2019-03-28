@@ -57,28 +57,23 @@ return $form;
 public function blockSubmit($form, FormStateInterface $form_state) {
   // Save our custom settings when the form is submitted.
   $this->setConfigurationValue('city', $form_state->getValue('city'));
+  
   $this->setConfigurationValue('desc', $form_state->getValue('desc'));
 
-  $image = $form_state->getValue('image');
-   
+        $image = $form_state->getValue('image');
         $file = File::load($image[0]);
         $file->setPermanent();
         $file->save();
       
     $this->setConfigurationValue('image', $form_state->getValue('image'));
-
-  // $this->configuration['city'] = $formState->getValue('city');
-
   
 }
 public function build() {
   $config = $this->getConfiguration();
-  //print_r($config);
   $city= isset($config['city']) ? $config['city'] : 'Mumbai';
   $desc= isset($config['desc']) ? $config['desc'] : '';
 
-  // $city=$config['city'];
-//return $city;
+ 
 
 
 
@@ -89,61 +84,7 @@ public function build() {
   
   $servCall = $s->get_weather_data($city);
   $jsonObj = json_decode($servCall);
-  // kint($jsonObj->main);
-  // exit();
-  // return $re;
-  // print_r('hello '.$ress);
-  // kint($jsonObj-);
-  // exit();
  
-
-//   $form['city'] = [
-    
-//     '#type' => 'textfield',
-//     '#title' => $this->t('City Name:'),
-//     '#value' =>$this->t((string) $city),
-//   ];
-  
-//   $form['desc'] = [
-    
-//     '#type' => 'textfield',
-//     '#title' => $this->t('Desription:'),
-//     '#value' =>$this->t((string) $desc),
-//   ];
-//   $image = $this->config['image'];
-// if (!empty($image[0])) {
-//   if ($file = File::load($image[0])) {
-//     $form['image'] = [
-//       // '#theme' => 'image_style',
-//       // '#style_name' => 'medium',
-//       '#uri' => $file->getFileUri(),
-//     ];
-//   }
-// }
-//   $form['temp_min'] = [
-    
-//     '#type' => 'textfield',
-//     '#title' => $this->t('Minimum Temp:'),
-//     '#value' =>$this->t((string) $jsonObj->main->temp_min),
-//   ];
-//   $form['temp_max'] = [
-    
-//     '#type' => 'textfield',
-//     '#title' => $this->t('Maximum Temp:'),
-//     '#value' =>$this->t((string) $jsonObj->main->temp_max),
-//   ];
-//   $form['pressure'] = [
-    
-//     '#type' => 'textfield',
-//     '#title' => $this->t('Pressure:'),
-//     '#value' =>$this->t((string) $jsonObj->main->pressure),
-//   ];
-//   $form['humidity'] = [
-    
-//     '#type' => 'textfield',
-//     '#title' => $this->t('Humidity:'),
-//     '#value' =>$this->t((string) $jsonObj->main->humidity),
-//   ];
 
    $image = $config['image'];
    $file = File::load($image[0]);
@@ -161,11 +102,6 @@ public function build() {
     '#humidity' => $jsonObj->main->humidity,
 );
 
-
-  // return array(
-  //   '#markup' => $this->t('@city', array('@city'=> $city)),
-  // );
-  //return $form;
 }
 
 

@@ -1,7 +1,22 @@
+{# css library which this twig file refers #}
+
 {{ attach_library('weather/weather_lab') }}
-{# <div class="custom">Some markup {{ image }}</div>
-    <div  class="custom" style="background-image: url('{{ file_url(image) }}')">
- </div> #}
+
+{#
+/**
+ * @file
+ * custom block.
+ * Available variables:
+ * - city: provide city name.
+ * - description: provide decription of city.
+ * - temp_min: provide minimum temperature of city.
+ * - temp_max: provide maximum temperature of city.
+ * - pressure: provide pressure of city.
+ * - humidity: provide humidity of city.
+ * - wind: provide wind of city.
+ */
+#}
+
 
   <div class="myblocks" style="background-image: url('{{ file_url(image) }}');">
     <div class="city">
