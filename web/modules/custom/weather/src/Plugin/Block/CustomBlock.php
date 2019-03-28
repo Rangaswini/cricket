@@ -24,83 +24,71 @@ use Drupal\file\Entity\File;
 class CustomBlock extends BlockBase {
   /**
    * {@inheritdoc}
-   */
- 
-
-  
+   */ 
 public function blockForm($form, FormStateInterface $form_state) {
-  $form=parent::blockForm($form, $form_state);
-  $config = $this->getConfiguration();
+        $form=parent::blockForm($form, $form_state);
+        $config = $this->getConfiguration();
 
-$form['city'] = array(
-  '#type' => 'textfield',
-  '#title' => t('City Name:'),
-);
-$form['desc'] = array(
-  '#type' => 'textfield',
-  '#title' => t('Description:'),
-  
-);
-$form['image'] = array(
-  '#type' => 'managed_file',
-  '#upload_location' => 'public://upload/hello',
-  '#title' => t('Image'),
-  '#upload_validators' => [
-      'file_validate_extensions' => ['jpg', 'jpeg', 'png', 'gif']
-  ],
-  '#default_value' => isset($this->configuration['image']) ? $this->configuration['image'] : '',
-  '#description' => t('The image to display'),
-  '#required' => true
-);
-return $form;
+      $form['city'] = array(
+        '#type' => 'textfield',
+        '#title' => t('City Name:'),
+      );
+      $form['desc'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Description:'),
+        
+      );
+      $form['image'] = array(
+        '#type' => 'managed_file',
+        '#upload_location' => 'public://upload/hello',
+        '#title' => t('Image'),
+        '#upload_validators' => [
+            'file_validate_extensions' => ['jpg', 'jpeg', 'png', 'gif']
+        ],
+        '#default_value' => isset($this->configuration['image']) ? $this->configuration['image'] : '',
+        '#description' => t('The image to display'),
+        '#required' => true
+      );
+      return $form;
 }
 public function blockSubmit($form, FormStateInterface $form_state) {
   // Save our custom settings when the form is submitted.
-  $this->setConfigurationValue('city', $form_state->getValue('city'));
-  
-  $this->setConfigurationValue('desc', $form_state->getValue('desc'));
-
-        $image = $form_state->getValue('image');
-        $file = File::load($image[0]);
-        $file->setPermanent();
-        $file->save();
-      
-    $this->setConfigurationValue('image', $form_state->getValue('image'));
-  
+      $this->setConfigurationValue('city', $form_state->getValue('city'));
+      $this->setConfigurationValue('desc', $form_state->getValue('desc'));
+      $image = $form_state->getValue('image');
+      $file = File::load($image[0]);
+      $file->setPermanent();
+      $file->save();
+      $this->setConfigurationValue('image', $form_state->getValue('image'));
 }
 public function build() {
-  $config = $this->getConfiguration();
-  $city= isset($config['city']) ? $config['city'] : 'Mumbai';
-  $desc= isset($config['desc']) ? $config['desc'] : '';
+      $config = $this->getConfiguration();
+      $city= isset($config['city']) ? $config['city'] : 'Mumbai';
+      $desc= isset($config['desc']) ? $config['desc'] : '';
+      $config1= \Drupal::config('weather.settings');
+          
+      $appid= $config1->get('app');
+      $s=\Drupal::service('weather.weather_service');
+      
+      $servCall = $s->getWeatherData($city);
+      $jsonObj = json_decode($servCall);
+    
 
- 
-
-
-
-  $config1= \Drupal::config('weather.settings');
-       
-  $appid= $config1->get('app');
-  $s=\Drupal::service('weather.weather_service');
-  
-  $servCall = $s->get_weather_data($city);
-  $jsonObj = json_decode($servCall);
- 
-
-   $image = $config['image'];
-   $file = File::load($image[0]);
-   $img=$file->getFileUri();
+      $image = $config['image'];
+      $file = File::load($image[0]);
+      $img=$file->getFileUri();
 
 
-  return array(
-    '#theme' => 'weather',
-    '#city' => $city,
-    '#image' => $img,
-    '#description' => $desc,
-    '#temp_min' => $jsonObj->main->temp_min, 
-    '#temp_max' => $jsonObj->main->temp_max,
-    '#pressure' => $jsonObj->main->pressure,
-    '#humidity' => $jsonObj->main->humidity,
-);
+      return array(
+        '#theme' => 'weather',
+        '#city' => $city,
+        '#image' => $img,
+        '#description' => $desc,
+        '#temp_min' => $jsonObj->main->temp_min, 
+        '#temp_max' => $jsonObj->main->temp_max,
+        '#pressure' => $jsonObj->main->pressure,
+        '#humidity' => $jsonObj->main->humidity,
+    );
 
 }
 

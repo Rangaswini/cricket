@@ -5,7 +5,7 @@ namespace  Drupal\weather\Services;
 use Guzzle\Http\Client;
 
 class WeatherService{
-    function get_weather_data($city)
+    function getWeatherData($city)
     {
         $config = \Drupal::config('weather.settings');
         $appid= $config->get('app');
