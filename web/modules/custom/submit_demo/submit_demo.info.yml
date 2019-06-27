@@ -1,0 +1,6 @@
+name: submit demo
+description: 'changed save configuration to save'
+type: module
+package: Custom
+core: 8.x
+configure: submit_demo.admin_settings

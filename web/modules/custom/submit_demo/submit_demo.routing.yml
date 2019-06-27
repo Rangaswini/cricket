@@ -1,0 +1,7 @@
+submit_demo.admin_settings:
+  path: '/admin/config/system/site-information'
+  defaults:
+    _form: '\Drupal\submit_demo\Form\SubmitDemoForm'
+    _title: 'Submit data'
+  requirements:
+    _permission: 'access content'
