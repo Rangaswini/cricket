@@ -1,0 +1,7 @@
+services:
+  helper_service.weather_service:
+    class: Drupal\weather\Services\HelperService
+    decorates: weather.weather_service
+    decoration_priority: 9
+    public: false
+    arguments: ['@helper_service.weather_service.inner', '@request_stack']
