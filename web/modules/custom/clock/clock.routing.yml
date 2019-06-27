@@ -1,0 +1,7 @@
+rangoform.simple_form:
+  path: '/clock'
+  defaults:
+    _form: '\Drupal\clock\Form\ClockForm'
+    _title: 'Clock'
+  requirements:
+    _permission: 'access content'

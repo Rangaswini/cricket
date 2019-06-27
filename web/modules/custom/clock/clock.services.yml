@@ -1,0 +1,3 @@
+services:
+  clock.clock_demo:
+    class: Drupal\clock\Services\ClockService

@@ -1,0 +1,5 @@
+name: clock
+description: 'display clock'
+type: module
+package: Custom
+core: 8.x

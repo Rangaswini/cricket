@@ -1,0 +1,34 @@
+{# css library which this twig file refers #}
+
+{{ attach_library('clock/clock_lab') }}
+
+{#
+/**
+ * @file
+ * custom block.
+ * Available variables:
+ * - zone: provide city name.
+ * -  currentDateTime: provide current DateTime.
+ * - currentFileTime: provide current FileTime.
+ * - utcOffset: provide utc Offset.
+ * - dayOfTheWeek: provide day Of TheWeek.
+ * - timeZoneName: provide time ZoneName.
+ */
+#}
+<div>
+  <div>
+   current Date Time {{ currentDateTime }}
+  </div>
+  <div>
+   current File Time {{ currentFileTime }}
+  </div>
+  <div >
+   utc Offset {{ utcOffset }}
+  </div>
+  <div >
+   day Of TheWeek {{ dayOfTheWeek }}
+  </div>
+  <div >
+   time Zone Name {{ timeZoneName }}
+  </div>
+</div>
