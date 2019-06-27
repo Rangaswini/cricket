@@ -1,0 +1,16 @@
+langcode: en
+dependencies:
+  enforced:
+    module:
+    - event
+  module:
+  - node
+id: node.field_myevent_id
+field_name: field_myevent_id
+entity_type: node
+type: string
+settings:
+  max_length: 10
+module: core
+locked: false
+cardinality: 1

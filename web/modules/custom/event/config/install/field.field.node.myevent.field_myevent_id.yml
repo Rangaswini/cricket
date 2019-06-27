@@ -1,0 +1,15 @@
+langcode: en
+dependencies:
+  config:
+  - field.storage.node.field_myevent_id
+  - node.type.myevent
+id: node.myevent.field_myevent_id
+field_name: field_myevent_id
+entity_type: node
+bundle: myevent
+label: 'myevent ID'
+description: 'ID field description'
+required: false
+default_value: 'example'
+settings: { }
+field_type: string

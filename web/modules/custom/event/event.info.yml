@@ -1,0 +1,5 @@
+name: Event
+description: 'added content-type for event'
+type: module
+package: Custom
+core: 8.x

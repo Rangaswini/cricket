@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.node.myevent.field_myevent_id
+  - node.type.myevent
+id: node.myevent.default
+targetEntityType: node
+bundle: myevent
+mode: default
+content:
+  field_foo_id:
+    label: hidden
+    type: string
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }

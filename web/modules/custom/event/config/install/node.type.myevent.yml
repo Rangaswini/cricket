@@ -1,0 +1,11 @@
+langcode: en
+dependencies:
+  enforced:
+    module:
+    - event
+name: 'myevent'
+type: myevent
+description: 'Event content type added when module installed.'
+help: 'This is help text.'
+new_revision: false
+preview_mode: 2
