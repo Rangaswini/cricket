@@ -1,0 +1,15 @@
+langcode: en
+dependencies:
+  config:
+  - field.storage.node.field_youtube_url
+  - node.type.page
+id: node.page.field_youtube_url
+field_name: field_youtube_url
+entity_type: node
+bundle: page
+label: 'youtube url'
+description: 'ID field description'
+required: false
+default_value: 'enter url'
+settings: { }
+field_type: string
